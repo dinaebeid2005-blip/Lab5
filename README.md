@@ -263,7 +263,7 @@ This section presents screenshots of the Library Management Website and its Lab 
 
 ### 12.1 Above the Average (F2.1)
 
-*Insert screenshot here.*
+
 
 
 <img width="1370" height="377" alt="image" src="https://github.com/user-attachments/assets/c641357a-58fc-407b-b255-c01b2af66133" />
@@ -271,7 +271,7 @@ This section presents screenshots of the Library Management Website and its Lab 
 
 ### 12.2 Never Borrowed (F2.2)
 
-*Insert screenshot here.*
+
 
 
 <img width="1280" height="485" alt="image" src="https://github.com/user-attachments/assets/21f4d902-fb96-435d-8813-ea377a184fb5" />
@@ -279,28 +279,28 @@ This section presents screenshots of the Library Management Website and its Lab 
 
 ### 12.3 Best of Category (F2.3)
 
-*Insert screenshot here.*
+
 
 <img width="1382" height="618" alt="image" src="https://github.com/user-attachments/assets/44d09a1d-a09d-4077-8d64-e7b8389d4aec" />
 
 
 ### 12.4 Active Members (F2.4)
 
-*Insert screenshot here.*
+
 
 <img width="1377" height="600" alt="image" src="https://github.com/user-attachments/assets/59f30588-5197-40b2-954e-026c01496aff" />
 
 
 ### 12.5 Reviews (F2.5)
 
-*Insert screenshot here.*
+
 
 <img width="1371" height="635" alt="image" src="https://github.com/user-attachments/assets/be30788c-711a-41a0-bc1c-29b6dea3345d" />
 
 
 ### 12.6 Countries and People (F2.6)
 
-*Insert screenshot here.*
+
 
 <img width="1507" height="781" alt="image" src="https://github.com/user-attachments/assets/4f229802-2b3a-499b-b0b7-6fefd4d155e9" />
 
@@ -310,7 +310,7 @@ This section presents screenshots of the Library Management Website and its Lab 
 
 ### 12.7 Bonus – Book Details View
 
-*Insert screenshot of the `book_details` view or its results here.*
+
 
 ---
 
