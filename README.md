@@ -311,6 +311,10 @@ This section presents screenshots of the Library Management Website and its Lab 
 ### 12.7 Bonus – Book Details View
 
 
+<img width="1600" height="492" alt="WhatsApp Image 2026-11-26 at 5 17 01 PM" src="https://github.com/user-attachments/assets/15bb2f16-26bd-49e9-962a-dcd708d6856e" />
+
+
+
 
 ---
 
