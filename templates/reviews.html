@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Reviews</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h1>Book Reviews</h1>
+
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Book ID</th>
+            <th>Book Title</th>
+            <th>Review Count</th>
+            <th>Average Rating</th>
+            <th>Rating Status</th>
+        </tr>
+
+        {% for book in book_reviews %}
+        <tr>
+            <td>{{ book.book_id }}</td>
+            <td>{{ book.title }}</td>
+            <td>{{ book.review_count }}</td>
+            <td>{{ book.average_rating }}</td>
+            <td>{{ book.rating_status }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br><br>
+
+    <h1>Books Above Overall Average Rating</h1>
+
+    <p>Overall average rating: {{ overall_average }}</p>
+
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Book Title</th>
+            <th>Average Rating</th>
+        </tr>
+
+        {% for book in above_average_reviews %}
+        <tr>
+            <td>{{ book.title }}</td>
+            <td>{{ book.average_rating }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="/">Back to Home</a>
+
+</body>
+</html>

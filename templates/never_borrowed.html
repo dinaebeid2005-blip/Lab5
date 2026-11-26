@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Never Borrowed Books and Members</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h1>Books Never Borrowed</h1>
+
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Book ID</th>
+            <th>Book Title</th>
+        </tr>
+
+        {% for book in books %}
+        <tr>
+            <td>{{ book.book_id }}</td>
+            <td>{{ book.title }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br><br>
+
+    <h1>Members Who Never Borrowed</h1>
+
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Member ID</th>
+            <th>Member Name</th>
+        </tr>
+
+        {% for member in members %}
+        <tr>
+            <td>{{ member.member_id }}</td>
+            <td>{{ member.name }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="/">Back to Home</a>
+
+</body>
+</html>
+

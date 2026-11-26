@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Most Borrowed Books</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h1>Most Borrowed Books</h1>
+
+    <h2>Top 3 Most Borrowed Books</h2>
+
+    <table border="1">
+        <tr>
+            <th>Book ID</th>
+            <th>Book Title</th>
+            <th>Number of Loans</th>
+        </tr>
+
+        {% for book in top_books %}
+        <tr>
+            <td>{{ book.book_id }}</td>
+            <td>{{ book.title }}</td>
+            <td>{{ book.loan_count }}</td>
+        </tr>
+        {% else %}
+        <tr>
+            <td colspan="3">No loan records found.</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Member Who Borrowed the Most</h2>
+
+    {% if top_member %}
+    <table border="1">
+        <tr>
+            <th>Member ID</th>
+            <th>Member Name</th>
+            <th>Number of Loans</th>
+        </tr>
+        <tr>
+            <td>{{ top_member.member_id }}</td>
+            <td>{{ top_member.name }}</td>
+            <td>{{ top_member.loan_count }}</td>
+        </tr>
+    </table>
+    {% else %}
+    <p>No loan records found.</p>
+    {% endif %}
+
+</body>
+</html>

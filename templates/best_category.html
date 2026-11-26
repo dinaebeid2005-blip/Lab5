@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Best of Category</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h1>Best Books in Each Category</h1>
+
+    <h2>Most Expensive Book in Each Category</h2>
+
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Category</th>
+            <th>Book Title</th>
+            <th>Price</th>
+        </tr>
+
+        {% for book in best_books %}
+        <tr>
+            <td>{{ book.category_name }}</td>
+            <td>{{ book.title }}</td>
+            <td>{{ book.price }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Books Above Their Category Average</h2>
+
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Category</th>
+            <th>Book Title</th>
+            <th>Price</th>
+            <th>Category Average</th>
+        </tr>
+
+        {% for book in above_category_average %}
+        <tr>
+            <td>{{ book.category_name }}</td>
+            <td>{{ book.title }}</td>
+            <td>{{ book.price }}</td>
+            <td>{{ book.category_average }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="/library">Back to Library</a>
+
+</body>
+</html>
+

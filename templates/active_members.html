@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Active Members and Authors</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h1>Members Above Average Loans</h1>
+
+    <p>Average loans per member: {{ average_loans }}</p>
+
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Member ID</th>
+            <th>Member Name</th>
+            <th>Number of Loans</th>
+            <th>Average Loans</th>
+        </tr>
+
+        {% for member in active_members %}
+        <tr>
+            <td>{{ member.member_id }}</td>
+            <td>{{ member.name }}</td>
+            <td>{{ member.loan_count }}</td>
+            <td>{{ member.average_loans }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br><br>
+
+    <h1>Authors with Borrowed Books</h1>
+
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Author ID</th>
+            <th>Author Name</th>
+        </tr>
+
+        {% for author in borrowed_authors %}
+        <tr>
+            <td>{{ author.author_id }}</td>
+            <td>{{ author.name }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="/">Back to Home</a>
+
+</body>
+</html>

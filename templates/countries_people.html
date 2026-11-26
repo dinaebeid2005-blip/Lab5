@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Countries and People</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h1>Countries of Authors and Publishers</h1>
+
+    <h2>Countries of Authors</h2>
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Country</th>
+        </tr>
+        {% for country in author_countries %}
+        <tr>
+            <td>{{ country.country }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Countries of Publishers</h2>
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Country</th>
+        </tr>
+        {% for country in publisher_countries %}
+        <tr>
+            <td>{{ country.country }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Countries Shared by Authors and Publishers</h2>
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Country</th>
+        </tr>
+        {% for country in common_countries %}
+        <tr>
+            <td>{{ country.country }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Countries of Authors Without Publishers</h2>
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Country</th>
+        </tr>
+        {% for country in author_only_countries %}
+        <tr>
+            <td>{{ country.country }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Authors and Members</h2>
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+        </tr>
+        {% for person in people %}
+        <tr>
+            <td>{{ person.name }}</td>
+            <td>{{ person.person_type }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="/">Back to Home</a>
+
+</body>
+</html>
